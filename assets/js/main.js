@@ -822,6 +822,10 @@ if($('.reveal').length)
 
 
 function updateProgress(selector, value) {
+  if(!document.querySelector(selector)){
+    return;
+  }
+  console.log(selector,"selector");
   document.querySelector(selector).style.width = value + '%';
 }
 updateProgress('.progress-inner.branding', 96);
