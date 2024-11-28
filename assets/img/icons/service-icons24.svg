@@ -5,19 +5,19 @@
 <path d="M19.3145 2.66174H20.6195V3.9668H19.3145V2.66174Z" fill="url(#paint3_linear_12498_3551)"/>
 <defs>
 <linearGradient id="paint0_linear_12498_3551" x1="-1.68944e-07" y1="7.66667" x2="32.0379" y2="7.33582" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF0A54"/>
+<stop stop-color="#740D96"/>
 <stop offset="1" stop-color="#FF6F00"/>
 </linearGradient>
 <linearGradient id="paint1_linear_12498_3551" x1="15.2949" y1="24.9519" x2="16.601" y2="24.9385" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF0A54"/>
+<stop stop-color="#740D96"/>
 <stop offset="1" stop-color="#FF6F00"/>
 </linearGradient>
 <linearGradient id="paint2_linear_12498_3551" x1="21.9766" y1="2.97441" x2="23.2827" y2="2.96093" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF0A54"/>
+<stop stop-color="#740D96"/>
 <stop offset="1" stop-color="#FF6F00"/>
 </linearGradient>
 <linearGradient id="paint3_linear_12498_3551" x1="19.3145" y1="2.97441" x2="20.6211" y2="2.96092" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF0A54"/>
+<stop stop-color="#740D96"/>
 <stop offset="1" stop-color="#FF6F00"/>
 </linearGradient>
 </defs>
