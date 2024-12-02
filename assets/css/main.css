@@ -10066,6 +10066,7 @@ Location:
   font-weight: var(--ztc-weight-regular);
   color: var(--ztc-text-text-3);
   transition: all 0.4s;
+  text-align: justify;
 }
 .blog4-section-area .blog-auhtor-boxarea .blog-content-area .readmore {
   font-family: var(--ztc-family-font1);
