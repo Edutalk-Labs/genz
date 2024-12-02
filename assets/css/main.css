@@ -25519,11 +25519,9 @@ Location:
   text-decoration-line: underline;
 }
 .contact-main-inner-area .contact-form-area {
-  border-radius: 7px;
-  background: var(--ztc-text-text-1);
+  border-radius: 7px; 
   position: relative;
-  z-index: 1;
-  box-shadow: 0px 4px 48px 0px rgba(0, 0, 0, 0.09);
+  z-index: 1; 
   padding: 32px;
 }
 @media (max-width: 767px) {
