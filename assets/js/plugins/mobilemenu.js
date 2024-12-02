@@ -6,12 +6,17 @@
     const mobile_nav_open = $('.mobile-nav-icon');
     const mobile_sidebar = $('.mobile-sidebar');
     const mobile_nav_close = $('.menu-close');
+    const mobile_menu_nav_close = $('.mobile-menu-close a');
 
     mobile_nav_open.on('click', function(){
       mobile_sidebar.addClass('mobile-menu-active');
     });
 
     mobile_nav_close.on('click', function(){
+      mobile_sidebar.removeClass('mobile-menu-active');
+    });
+
+    mobile_menu_nav_close.on('click', function(){
       mobile_sidebar.removeClass('mobile-menu-active');
     });
 
