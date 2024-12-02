@@ -28330,6 +28330,7 @@ Location:
   font-weight: var(--ztc-weight-regular);
   color: var(--ztc-text-text-3);
   transition: all 0.4s;
+  text-align: justify;
 }
 .testimonial4-section-area .testimonial4-slider-area .testimonial-boxarea .auhtor-logo {
   display: flex;
