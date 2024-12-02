@@ -4261,6 +4261,7 @@ Location:
   font-weight: var(--ztc-weight-regular);
   color: var(--ztc-text-text-2);
   transition: all 0.4s;
+  text-align: justify;
 }
 .service1-section-area .service-all-boxes-area .service-boxarea.box2 {
   background: var(--ztc-bg-bg-6);
