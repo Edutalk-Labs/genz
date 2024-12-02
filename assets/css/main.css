@@ -4229,6 +4229,7 @@ Location:
   }
 }
 .service1-section-area .service-all-boxes-area .service-boxarea {
+  flex: 1;
   text-align: center;
   background: var(--ztc-bg-bg-5);
   position: relative;
@@ -4250,6 +4251,7 @@ Location:
   color: var(--ztc-text-text-2);
   display: inline-block;
   transition: all 0.4s;
+  height: calc(var(--ztc-font-size-font-s30) * 2);
 }
 .service1-section-area .service-all-boxes-area .service-boxarea p {
   font-family: var(--ztc-family-font1);
