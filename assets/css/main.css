@@ -20343,6 +20343,7 @@ Location:
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 8px;
+  background-color: #fff;
 }
 .works4-section-area .works-author-boxarea {
   position: relative;
