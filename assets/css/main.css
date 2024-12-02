@@ -28336,6 +28336,14 @@ Location:
   color: var(--ztc-text-text-3);
   transition: all 0.4s;
   text-align: justify;
+
+  display: -webkit-box; /* Bật chế độ flexbox cho nội dung */
+  -webkit-box-orient: vertical; /* Thiết lập hướng box là dọc */
+  overflow: hidden; /* Ẩn phần văn bản vượt quá giới hạn */
+  text-overflow: ellipsis; /* Thêm dấu "..." nếu vượt quá */  
+  max-height: calc(var(--ztc-font-size-font-s30) * 7); /* Giới hạn tối đa 3 dòng */
+  height: calc(var(--ztc-font-size-font-s30) * 7); /* Giới hạn tối đa 3 dòng */
+  -webkit-line-clamp: 7;
 }
 .testimonial4-section-area .testimonial4-slider-area .testimonial-boxarea .auhtor-logo {
   display: flex;
