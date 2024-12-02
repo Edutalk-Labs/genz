@@ -3128,19 +3128,16 @@ Location:
      object-fit: cover;
   border-radius: 4px;
 }
-.about3-section-area .about-header-area {
-  padding: 0 0 0 60px;
+.about3-section-area .about-header-area {  padding: 0; 
 }
 @media (max-width: 767px) {
   .about3-section-area .about-header-area {
-    padding: 0;
-    margin-top: 30px;
+    padding: 0; 
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .about3-section-area .about-header-area {
-    padding: 0;
-    margin-top: 30px;
+    padding: 0; 
   }
 }
 .about3-section-area .about-header-area .list-area {
@@ -20174,7 +20171,7 @@ Location:
 .work4-section-area {
   position: relative;
   z-index: 1;
-  background: var(--ztc-bg-bg-14);
+  background: var(--ztc-bg-bg-16);
 }
 .work4-section-area .work2-header {
   margin-bottom: 60px;
