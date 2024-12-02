@@ -26426,6 +26426,11 @@ Location:
   z-index: 1;
   background: var(--ztc-text-text-6);
 }
+
+.cta4-section-area .container{ 
+  z-index: 2;
+}
+
 @media (max-width: 767px) {
   .cta4-section-area {
     padding: 0;
@@ -26440,11 +26445,13 @@ Location:
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 1;
 }
 .cta4-section-area .cta-bg2 {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 1;
 }
 .cta4-section-area .cta-header-area {
   background: var(--ztc-text-text-6);
