@@ -872,7 +872,7 @@
     const $container = $(".business_center");
 
     // Xóa nội dung hiện tại (nếu cần)
-      $container.empty();
+    $container.empty();
 
     // Lặp qua các phần quà
     data.spin_gifts.forEach((gift, index) => {
