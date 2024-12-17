@@ -866,6 +866,47 @@
         console.error("Error fetching promotions:", error);
       },
     });
+    let isSubmitting = false;
+    $("#registerForm").on("submit", function (event) {
+      event.preventDefault();
+      if (isSubmitting) return;
+      isSubmitting = true;
+      const name = $("#name").val();
+      const email = $("#email").val();
+      const phone = $("#phone").val();
+
+      if (!name || !email || !phone) {
+        isSubmitting = false;
+        alert("Vui lòng nhập đầy đủ thông tin!");
+        return;
+      }
+      const $submitButton = $("#submitBtn");
+      $submitButton.prop("disabled", true).html('Đang gửi <i class="fa-solid fa-spinner fa-spin"></i>');
+      // Gửi dữ liệu qua API
+      $.ajax({
+        url: "https://cntt-api.edutalk.edu.vn/genz/register",
+        method: "POST",
+        data: {
+          name: name,
+          email: email,
+          phone: phone,
+        },
+        success: function (response) {
+          isSubmitting = false;
+          $("#registerForm input").each(function () {
+            $(this).val("");
+          });
+          alert("Đăng ký thành công!");
+        },
+        error: function (xhr, status, error) {
+          alert("Đăng ký không thành công. Vui lòng thử lại!");
+        },
+        complete: function () {
+          isSubmitting = false;
+          $submitButton.prop("disabled", false).html('Gửi <i class="fa-solid fa-arrow-right"></i>');
+        },
+      });
+    });
   });
 
   function renderPromotions(data) {
