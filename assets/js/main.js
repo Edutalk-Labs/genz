@@ -874,7 +874,20 @@
       const name = $("#name").val();
       const email = $("#email").val();
       const phone = $("#phone").val();
+      const phoneRegex = /^(0[3|5|7|8|9])\d{8}$/;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
 
+      if (!emailRegex.test(email)) {
+        isSubmitting = false;
+        alert("Email không hợp lệ!");
+        return;
+      }
+
+      if (!phoneRegex.test(phone)) {
+        isSubmitting = false;
+        alert("Số điện thoại không hợp lệ");
+        return;
+      }
       if (!name || !email || !phone) {
         isSubmitting = false;
         alert("Vui lòng nhập đầy đủ thông tin!");
