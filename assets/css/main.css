@@ -28427,6 +28427,17 @@ h1.skeleton-text {
   align-items: center;
   justify-content: space-between;
 }
+
+.testimonial4-section-area .testimonial4-slider-area .testimonial-boxarea .auhtor-logo .logo {
+  height: 48px;
+  width: 48px; 
+}
+
+.testimonial4-section-area .testimonial4-slider-area .testimonial-boxarea .auhtor-logo .logo img { 
+  border-radius: 50%; /* Làm ảnh thành hình tròn */
+  object-fit: cover; /* Đảm bảo ảnh được cắt gọn trong khung hình */
+}
+
 .testimonial4-section-area .testimonial4-slider-area .testimonial-boxarea .auhtor-logo .text a {
   display: inline-block;
   font-size: var(--ztc-font-size-font-s20);
