@@ -20442,6 +20442,7 @@ html {
   color: var(--ztc-text-text-3);
   transition: all 0.4s;
   opacity: 80%;
+  text-align: justify;
 }
 .works4-section-area .works-author-boxarea .content-area .readmore {
   font-family: var(--ztc-family-font1);
