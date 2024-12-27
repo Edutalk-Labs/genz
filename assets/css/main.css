@@ -20443,6 +20443,9 @@ html {
   transition: all 0.4s;
   opacity: 80%;
   text-align: justify;
+  max-height: calc(var(--ztc-font-size-font-s30)* 5);
+  height: calc(var(--ztc-font-size-font-s30)* 5);
+  -webkit-line-clamp: 5;
 }
 .works4-section-area .works-author-boxarea .content-area .readmore {
   font-family: var(--ztc-family-font1);
