@@ -24065,7 +24065,7 @@ h1.skeleton-text {
 .team3-section-area .team-boxarea .content p {
   font-family: var(--ztc-family-font1);
   font-size: var(--ztc-font-size-font-s16);
-  line-height: var(--ztc-font-size-font-s16);
+  line-height: var(--ztc-font-size-font-s24);
   font-weight: var(--ztc-weight-regular);
   color: var(--ztc-text-text-3);
   transition: all 0.4s;
