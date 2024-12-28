@@ -4247,8 +4247,9 @@ Location:
 .service1-section-area .service-all-boxes-area .service-boxarea img {
   transition: all 0.4s;
   height: 120px;
-  width: 120px%;
+  width: 120px;
 }
+
 .service1-section-area .service-all-boxes-area .service-boxarea a {
   font-family: var(--ztc-family-font1);
   font-size: var(--ztc-font-size-font-s20);
