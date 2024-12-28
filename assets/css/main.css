@@ -3222,6 +3222,11 @@ Location:
   position: relative;
   padding: 0 50px;
 }
+
+.about4-section-area .about-content-area p {
+  text-align: justify;
+}
+
 .about4-section-area .about-content-area .arrow-circle {
   background: #fbf3fd;
   border-radius: 50%;
