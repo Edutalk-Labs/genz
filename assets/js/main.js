@@ -949,8 +949,15 @@
   });
 
   function renderPromotions(data) {
-    const $container = $(".business_center");
 
+    const $headerDate = $(".head-title-endow h5");
+    const startDate = data.start_date || "N/A";
+    const endDate = data.end_date || "N/A";
+    const time = data.start_date +' - ' + data.end_date
+    $headerDate.html(
+      `<img src="assets/img/icons/logo-icons3.svg" alt="" />Áp dụng duy nhất từ ${startDate} - ${endDate}`
+    );
+    const $container = $(".business_center");
     // Xóa nội dung hiện tại (nếu cần)
     $container.empty();
 
@@ -960,15 +967,14 @@
       <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-duration="1000">
         <div class="pricing-boxarea ${index % 2 != 0 ? "active" : ""}">
           <h4>${gift.name}</h4>
-          <p>${gift.description || "Không có mô tả"}</p>
           <h1>${gift.value}%</h1>
           <div class="space32"></div>
           <div class="list-area">
             <h5>Thông tin thêm:</h5>
             <ul>
               <li> <img src="assets/img/icons/check2.svg" alt="" class="check2" /><img src="assets/img/icons/check3.svg" alt="" class="check3" />Giá trị còn lại: ${gift.value_remaining || "N/A"}</li>
-              <li> <img src="assets/img/icons/check2.svg" alt="" class="check2" /><img src="assets/img/icons/check3.svg" alt="" class="check3" />Loại chương trình: ${
-                gift.program_type || "Không xác định"
+              <li> <img src="assets/img/icons/check2.svg" alt="" class="check2" /><img src="assets/img/icons/check3.svg" alt="" class="check3" /> ${
+                gift.description || "Không xác định"
               }</li>
             </ul>
           </div>
