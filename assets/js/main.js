@@ -972,7 +972,7 @@
           <div class="list-area">
             <h5>Thông tin thêm:</h5>
             <ul>
-              <li> <img src="assets/img/icons/check2.svg" alt="" class="check2" /><img src="assets/img/icons/check3.svg" alt="" class="check3" />Giá trị còn lại: ${gift.value_remaining || "N/A"}</li>
+              <li> <img src="assets/img/icons/check2.svg" alt="" class="check2" /><img src="assets/img/icons/check3.svg" alt="" class="check3" />Giá trị còn lại: ${gift.value_remainingamount?.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' }) || "N/A"}</li>
               <li> <img src="assets/img/icons/check2.svg" alt="" class="check2" /><img src="assets/img/icons/check3.svg" alt="" class="check3" /> ${
                 gift.description || "Không xác định"
               }</li>
