@@ -878,7 +878,7 @@
   $(document).ready(function () {
     // Gọi API
     $.ajax({
-      url: "https://cntt-api.edutalk.edu.vn/genz/promotions", // Thay {url} bằng URL thực tế của API
+      url: "https://api2.edutalk.edu.vn/genz/promotions", // Thay {url} bằng URL thực tế của API
       method: "GET",
       success: function (data) {
         // Kiểm tra dữ liệu
@@ -923,7 +923,7 @@
       $submitButton.prop("disabled", true).html('Đang gửi <i class="fa-solid fa-spinner fa-spin"></i>');
       // Gửi dữ liệu qua API
       $.ajax({
-        url: "https://cntt-api.edutalk.edu.vn/genz/register",
+        url: "https://api2.edutalk.edu.vn/genz/register",
         method: "POST",
         data: {
           name: name,
