@@ -1,0 +1,370 @@
+/* ============================================================
+   MODERN UI OVERLAY  —  Sinh Trắc Vân Tay Gen Z
+   Nạp sau main.css để hiện đại hóa giao diện mà không phá template gốc.
+   ============================================================ */
+
+:root {
+  --m-primary: #6d28d9;        /* violet 700 */
+  --m-primary-2: #9333ea;      /* purple 600 */
+  --m-accent: #ec4899;         /* pink 500  */
+  --m-ink: #0f1020;
+  --m-muted: #5b5b73;
+  --m-surface: #ffffff;
+  --m-bg-soft: #f7f5ff;
+  --m-grad: linear-gradient(135deg, #7c3aed 0%, #9333ea 45%, #ec4899 100%);
+  --m-grad-soft: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(236, 72, 153, 0.12));
+  --m-radius: 20px;
+  --m-radius-lg: 28px;
+  --m-shadow-sm: 0 4px 16px rgba(24, 16, 64, 0.06);
+  --m-shadow: 0 18px 48px -16px rgba(85, 33, 181, 0.28);
+  --m-shadow-hover: 0 28px 64px -18px rgba(85, 33, 181, 0.42);
+  --m-ring: 0 0 0 4px rgba(124, 58, 237, 0.16);
+}
+
+/* ---------- Base polish ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body.homepage4-body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.1px;
+}
+
+/* Soft decorative gradient backdrop behind the whole page */
+body.homepage4-body {
+  background-color: #fbfaff;
+  background-image:
+    radial-gradient(60rem 60rem at 110% -10%, rgba(147, 51, 234, 0.10), transparent 60%),
+    radial-gradient(46rem 46rem at -10% 30%, rgba(236, 72, 153, 0.08), transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Anchor offset so sticky header doesn't cover section titles */
+#service, #procedure, #ourteam, #commit, #pricing, #contact {
+  scroll-margin-top: 110px;
+}
+
+/* ---------- Header: glassmorphism + sticky polish ---------- */
+.header-area.homepage4 {
+  transition: background 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease;
+}
+.header-area.homepage4.sticky {
+  background: rgba(255, 255, 255, 0.72) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  backdrop-filter: saturate(180%) blur(16px);
+  box-shadow: 0 8px 30px -12px rgba(24, 16, 64, 0.18);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.08);
+}
+
+.header-area.homepage4 .main-menu ul li a {
+  position: relative;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+.header-area.homepage4 .main-menu ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--m-grad);
+  transition: width 0.3s ease;
+}
+.header-area.homepage4 .main-menu ul li a:hover {
+  color: var(--m-primary);
+}
+.header-area.homepage4 .main-menu ul li a:hover::after {
+  width: 100%;
+}
+
+/* ---------- Buttons: gradient + glow ---------- */
+.header-btn12 {
+  background: var(--m-grad) !important;
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 12px 28px -10px rgba(124, 58, 237, 0.6);
+  background-size: 160% 160%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.5s ease;
+}
+.header-btn12:hover {
+  background: var(--m-grad) !important;
+  background-size: 160% 160%;
+  background-position: right center;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(124, 58, 237, 0.7);
+}
+
+/* ---------- Section heading accents ---------- */
+.heading8 h5 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--m-grad-soft);
+  color: var(--m-primary);
+  font-weight: 600;
+  border: 1px solid rgba(124, 58, 237, 0.15);
+}
+/* Gradient text on the highlighted word. The GSAP SplitText plugin wraps
+   each character in its own <div>, so the gradient + clip must be applied to
+   those descendants too — otherwise the chars inherit the transparent fill
+   without a background and disappear entirely. */
+.heading8 h2 span,
+.heading8 h2 span div {
+  background-image: var(--m-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* The decorative underline <img> sits inside the span — keep it painted. */
+.heading8 h2 span img {
+  -webkit-text-fill-color: initial;
+}
+
+/* ---------- Generic card lift for the main content boxes ---------- */
+.service-box-area,
+.service-boxarea,
+.work-process-area,
+.works-author-boxarea,
+.team-boxarea,
+.blog-auhtor-boxarea,
+.testimonial-boxarea,
+.pricing-boxarea {
+  border-radius: var(--m-radius) !important;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  will-change: transform;
+}
+.service-box-area:hover,
+.service-boxarea:hover,
+.work-process-area:hover,
+.works-author-boxarea:hover,
+.team-boxarea:hover,
+.blog-auhtor-boxarea:hover,
+.testimonial-boxarea:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--m-shadow-hover);
+}
+
+/* ---------- "Khả năng" service boxes ---------- */
+.service-box-area {
+  background: var(--m-surface);
+  border: 1px solid rgba(124, 58, 237, 0.08);
+  box-shadow: var(--m-shadow-sm);
+  padding: 28px;
+}
+.service-box-area .icons-area .number h4 {
+  background: var(--m-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* ---------- Detail service cards (09 chỉ số, etc.) ---------- */
+.service-boxarea {
+  background: var(--m-surface);
+  border: 1px solid rgba(124, 58, 237, 0.08);
+  box-shadow: var(--m-shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+.service-boxarea::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: var(--m-grad);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.service-boxarea:hover::before {
+  transform: scaleX(1);
+}
+.service-boxarea a {
+  transition: color 0.25s ease;
+}
+.service-boxarea:hover a {
+  color: var(--m-primary);
+}
+
+/* ---------- Work / process steps ---------- */
+.work-process-area {
+  background: var(--m-surface);
+  border: 1px solid rgba(124, 58, 237, 0.08);
+  box-shadow: var(--m-shadow-sm);
+  padding: 22px;
+}
+.work-process-area .icons {
+  border-radius: 16px;
+  background: var(--m-grad-soft);
+  transition: transform 0.35s ease;
+}
+.work-process-area:hover .icons {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+/* ---------- Commitment cards ---------- */
+.works-author-boxarea {
+  border: 1px solid rgba(124, 58, 237, 0.08);
+  box-shadow: var(--m-shadow-sm);
+  height: 100%;
+}
+/* Icon circle: keep the template's light circle + colored icon in the
+   normal state (so the icon stays visible), just soften the tint. The
+   template already turns the card purple + icon white on hover. */
+.works4-section-area .works-author-boxarea .icons {
+  background: var(--m-grad-soft);
+}
+
+/* ---------- Team cards ---------- */
+.team-boxarea {
+  overflow: hidden;
+  box-shadow: var(--m-shadow-sm);
+}
+.team-boxarea .img1 {
+  border-radius: var(--m-radius) var(--m-radius) 0 0;
+  overflow: hidden;
+}
+.team-boxarea .img1 img {
+  transition: transform 0.6s ease;
+  width: 100%;
+}
+.team-boxarea:hover .img1 img {
+  transform: scale(1.06);
+}
+.team-boxarea .content {
+  padding: 18px;
+}
+.team-boxarea .content a {
+  font-weight: 700;
+}
+
+/* ---------- Testimonials ---------- */
+.testimonial-boxarea {
+  background: var(--m-surface);
+  border: 1px solid rgba(124, 58, 237, 0.08);
+  box-shadow: var(--m-shadow-sm);
+  padding: 32px;
+}
+.testimonial-boxarea .auhtor-logo .logo img {
+  border-radius: 50%;
+  border: 3px solid rgba(124, 58, 237, 0.18);
+}
+.testimonial-boxarea ul li i {
+  color: #f59e0b;
+}
+
+/* ---------- Pricing cards ---------- */
+.pricing-boxarea {
+  background: var(--m-surface);
+  border: 1px solid rgba(124, 58, 237, 0.1);
+  box-shadow: var(--m-shadow-sm);
+  padding: 36px 30px;
+}
+.pricing-boxarea:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--m-shadow-hover);
+}
+.pricing-boxarea h1 {
+  background: var(--m-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+.pricing-boxarea.active {
+  background: var(--m-grad);
+  border: none;
+  color: #fff;
+  box-shadow: var(--m-shadow-hover);
+  transform: translateY(-8px) scale(1.02);
+}
+.pricing-boxarea.active h1,
+.pricing-boxarea.active h4,
+.pricing-boxarea.active h5,
+.pricing-boxarea.active p,
+.pricing-boxarea.active li {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff;
+}
+
+/* ---------- Skeleton loading shimmer ---------- */
+.loading-skeleton .skeleton {
+  background: linear-gradient(90deg, #eee 25%, #f5f5f5 37%, #eee 63%);
+  background-size: 400% 100%;
+  border-radius: 10px;
+  animation: m-shimmer 1.4s ease infinite;
+}
+.loading-skeleton .skeleton-text {
+  height: 18px;
+  margin: 10px 0;
+}
+.loading-skeleton .skeleton-line {
+  height: 12px;
+  margin: 8px 0;
+  list-style: none;
+}
+@keyframes m-shimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+/* ---------- Contact form inputs ---------- */
+.contact-form-area .input-area input {
+  border-radius: 14px !important;
+  border: 1.5px solid rgba(124, 58, 237, 0.18) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.contact-form-area .input-area input:focus {
+  outline: none;
+  border-color: var(--m-primary) !important;
+  box-shadow: var(--m-ring);
+}
+.contact-form-area .input-area input::placeholder {
+  color: #9aa0b4;
+}
+
+/* ---------- Footer newsletter input ---------- */
+.footer-logo-area3 form input {
+  border-radius: 12px;
+  transition: box-shadow 0.25s ease;
+}
+.footer-logo-area3 form input:focus {
+  outline: none;
+  box-shadow: var(--m-ring);
+}
+
+/* ---------- Scroll-to-top progress ring ---------- */
+.progress-wrap::after {
+  color: var(--m-primary);
+}
+.progress-wrap svg.progress-circle path {
+  stroke: var(--m-primary);
+  stroke-width: 4;
+}
+
+/* ---------- Reduced motion respect ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+/* ---------- Mobile refinements ---------- */
+@media (max-width: 991px) {
+  #service, #procedure, #ourteam, #commit, #pricing, #contact {
+    scroll-margin-top: 84px;
+  }
+  .service-box-area,
+  .service-boxarea,
+  .works-author-boxarea,
+  .pricing-boxarea {
+    padding: 24px;
+  }
+}
